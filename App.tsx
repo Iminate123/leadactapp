@@ -1,12 +1,16 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import AuthRouter from './src/navigation/AuthRouter';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
-  )
-}
+    <NavigationContainer>
+      <AuthRouter />
+    </NavigationContainer>
+  );
+};
 
-export default App
+export default App;
