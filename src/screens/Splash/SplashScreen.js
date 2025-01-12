@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import { IMAGE_PATH } from '../../constants/ImagePath';
 
 const SplashScreen = ({ navigation }) => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const SplashScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
+      <Image source={IMAGE_PATH.LOGO} style={styles.logo} />
     </View>
   );
 };
