@@ -9,7 +9,7 @@ const Login = ({navigation}) => {
     const [error, setError] = useState('');
 
     const handlePress = () => {
-        navigation.navigate('TabRoute');
+        navigation.navigate('Home');
         //setIsLoading(true);
         setError('');
 

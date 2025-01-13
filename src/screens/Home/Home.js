@@ -21,6 +21,15 @@ const Home = ({ navigation }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredItems, setFilteredItems] = useState(items);
 
+
+  // handleLabel = (label) => {
+  //   Alert.alert('Label', label);
+  //   if (label === 'Contact') {
+  //     navigation.navigate('Contact');
+  //   }
+  // }
+
+
   const handleSearch = (text) => {
     setSearchQuery(text);
 
@@ -59,24 +68,24 @@ const Home = ({ navigation }) => {
       />
       <Search value={searchQuery} onChange={handleSearch} />
       <LeadCard />
-      <CustomRow title="My Score" 
-        onPress={() => alert('Menu Item 1 pressed')} 
-        backgroundColor="#ffffff"/>
-        <CustomRow title="Analytics" 
-        onPress={() => alert('Menu Item 1 pressed')} 
-        backgroundColor="#ffffff"/>
-        <CustomRow title="MyMagicBox(MMB)" 
-        onPress={() => alert('Menu Item 1 pressed')} 
-        backgroundColor="#ffffff"/>
-        <CustomRow title="Post Property" 
-        onPress={() => alert('Menu Item 1 pressed')} 
-        backgroundColor="#ffffff"/>
-        <CustomRow title="Booking" 
-        onPress={() => alert('Menu Item 1 pressed')} 
-        backgroundColor="#ffffff"/>
-        <CustomRow title="My Request" 
-        onPress={() => alert('Menu Item 1 pressed')} 
-        backgroundColor="#ffffff"/>
+      <CustomRow title="My Score"
+        onPress={() => navigation.navigate('Contact')}
+        backgroundColor="#ffffff" />
+      <CustomRow title="Analytics"
+        onPress={() => alert('Menu Item 1 pressed')}
+        backgroundColor="#ffffff" />
+      <CustomRow title="MyMagicBox(MMB)"
+        onPress={() => alert('Menu Item 1 pressed')}
+        backgroundColor="#ffffff" />
+      <CustomRow title="Post Property"
+        onPress={() => alert('Menu Item 1 pressed')}
+        backgroundColor="#ffffff" />
+      <CustomRow title="Booking"
+        onPress={() => alert('Menu Item 1 pressed')}
+        backgroundColor="#ffffff" />
+      <CustomRow title="My Request"
+        onPress={() => alert('Menu Item 1 pressed')}
+        backgroundColor="#ffffff" />
     </ScrollView>
   )
 }

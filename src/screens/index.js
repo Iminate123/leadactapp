@@ -12,3 +12,9 @@ export {default as Listing} from './Listings/Listing';
 
 //Tools
 export {default as Tools} from './Tools/Tools';
+
+// Contact
+export {default as Contact} from './Contacts/Contact';
+
+//AddContact
+export {default as AddContact} from './Contacts/AddContact';

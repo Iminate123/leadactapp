@@ -4,5 +4,7 @@ export default {
     HOME:'Home',
     LISTING:'Listing',
     TOOLS:'Tools',
+    CONTACT:'Contact',
+    ADDCONTACT:'AddContact',
   };
   

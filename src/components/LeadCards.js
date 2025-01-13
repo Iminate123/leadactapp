@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,TouchableOpacity } from 'react-native';
 
-const LeadCard = () => {
+const LeadCard = ({ onpress,label }) => {
     const boxes = [
         { color: '#FF5733', label: 'Contact', number: '228268', badge: '6' },
         { color: '#33FF57', label: 'Intrested', number: '74', badge: '8' },
@@ -11,26 +11,36 @@ const LeadCard = () => {
         { color: '#8D33FF', label: 'Sales', number: '17', badge: '7' },
     ];
 
+    const onBoxPress = (labelName) => {
+        console.log(labelName)
+    }
+
     return (
         <View style={styles.card}>
             <View style={styles.row}>
                 {boxes.map((box, index) => (
                     <View key={index} style={styles.wrapper}>
                         {/* Label behind the box */}
+                        {/* <TouchableOpacity
+                            key={box.label}
+                            style={styles.box}
+                            onpress={onBoxPress(box.label)}
+                            label={label}
+                        > */}
+                            {/* Box Container */}
+                            <View style={[styles.box, { borderColor: box.color }]} >
+                                {/* Colored start part */}
+                                <View style={[styles.startPart, { backgroundColor: box.color }]} />
+                                {/* Number in the middle */}
+                                <Text style={styles.number}>{box.number}</Text>
 
-                        {/* Box Container */}
-                        <View style={[styles.box, { borderColor: box.color }]}>
-                            {/* Colored start part */}
-                            <View style={[styles.startPart, { backgroundColor: box.color }]} />
-                            {/* Number in the middle */}
-                            <Text style={styles.number}>{box.number}</Text>
+                                {/* Badge */}
+                                <View style={styles.badge}>
+                                    <Text style={styles.badgeText}>{box.badge}</Text>
+                                </View>
 
-                            {/* Badge */}
-                            <View style={styles.badge}>
-                                <Text style={styles.badgeText}>{box.badge}</Text>
                             </View>
-
-                        </View>
+                        {/* </TouchableOpacity> */}
                         <Text style={[styles.label]}>{box.label}</Text>
                     </View>
                 ))}
