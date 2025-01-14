@@ -20,7 +20,7 @@ const CustomDropDown = ({ data, onSelect, placeholder }) => {
     <View style={styles.container}>
       <List.Section>
         <List.Accordion
-          style={{ backgroundColor: '#ebedf0' }}
+          style={{ backgroundColor: '#ebedf0',height: 60,}}
           title={selectedItem ? selectedItem.label : placeholder || 'Select an item'}
           expanded={expanded}
           onPress={handlePress}

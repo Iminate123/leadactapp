@@ -9,7 +9,7 @@ const Login = ({navigation}) => {
     const [error, setError] = useState('');
 
     const handlePress = () => {
-        navigation.navigate('Home');
+        
         //setIsLoading(true);
         setError('');
 
@@ -27,6 +27,7 @@ const Login = ({navigation}) => {
 
         // If validation passes
         Alert.alert('Success', 'You are logged in!');
+        navigation.navigate('Home');
         console.log('Email:', email,password);
     };
 

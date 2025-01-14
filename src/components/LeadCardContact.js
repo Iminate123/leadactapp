@@ -2,15 +2,17 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const LeadCardContact = ({ title, subtitle, onCallPress, onSmsPress, onWhatsappPress }) => {
+const LeadCardContact = ({ title, subtitle, onCallPress, onSmsPress, onWhatsappPress,oncardPress }) => {
   return (
     <View style={styles.card}>
       {/* Left Section: Title and Subtitle */}
+      <TouchableOpacity onPress={oncardPress}>
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.subtitle}>{subtitle}</Text>
         <View style={styles.iconContainers}><Text>McgicBricks</Text></View>
       </View>
+      </TouchableOpacity>
 
       {/* Right Section: Icons */}
       <View style={styles.iconContainer}>

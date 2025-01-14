@@ -6,6 +6,13 @@ import {
   Login,
   Contact,
   AddContact,
+  InterestedDetails,
+  NotIntrested,
+  CallBackDetails,
+  CreateTask,
+  RescheduleTask,
+  LostDetails,
+  ContactDetails,
 } from './../screens/index';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -17,7 +24,7 @@ const AuthStack = ({ navigation, route }) => {
   return (
     <Stack.Navigator
       initialRouteName="Splash"
-      
+
       screenOptions={{
         headerMode: 'screen',
         // headerStyle: {
@@ -35,7 +42,7 @@ const AuthStack = ({ navigation, route }) => {
         component={Login}
         options={{ headerShown: false }}
       />
-      <Stack.Screen screenOptions={{ headerTitleAlign:'left'}}
+      <Stack.Screen screenOptions={{ headerTitleAlign: 'left' }}
         name="Home"
         component={TabRoute}
       />
@@ -47,6 +54,35 @@ const AuthStack = ({ navigation, route }) => {
         name="AddContact"
         component={AddContact}
       />
+      <Stack.Screen
+        name="InterestedDetails"
+        component={InterestedDetails}
+      />
+     <Stack.Screen
+        name="NotIntrested"
+        component={NotIntrested}
+      /> 
+      <Stack.Screen
+        name="CallBackDetails"
+        component={CallBackDetails}
+      /> 
+      <Stack.Screen
+        name="CreateTask"
+        component={CreateTask}
+      />
+      <Stack.Screen
+        name="RescheduleTask"
+        component={RescheduleTask}
+      />  
+      <Stack.Screen
+        name="LostDetails"
+        component={LostDetails}
+      /> 
+      <Stack.Screen
+        name="ContactDetails"
+        component={ContactDetails}
+      />  
+
 
     </Stack.Navigator>
   );

@@ -11,9 +11,11 @@ const Lead = ({ navigation }) => {
         { id: '3', title: 'Alice Brown', subtitle: 'UI/UX Designer' },
     ];
     const renderItem = ({ item }) => (
+ 
         <LeadCardContact
             title={item.title}
             subtitle={item.subtitle}
+            oncardPress={() => navigation.navigate('ContactDetails')}
             onCallPress={() => handleCallPress(item.title)}
             onSmsPress={() => handleSmsPress(item.title)}
             onWhatsappPress={() => handleWhatsappPress(item.title)}

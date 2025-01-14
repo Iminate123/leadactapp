@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import CustomDropdown from '../../components/CustomDropDown';
 import CustomTextInput from '../../components/CustomInput';
 import CountryDropdown from '../../components/CountryDropDown';
-import TextInputNumber from '../../components/TextIputNumber';
 import { ScrollView } from 'react-native-gesture-handler';
 import CustomButton from '../../components/CustomButton';
 

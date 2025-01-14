@@ -36,7 +36,7 @@ const Contact = ({ navigation }) => {
       renderScene={({ route }) => {
         switch (route.key) {
           case 'leads':
-            return <Lead navigation={navigation} />;
+            return <Lead navigation={navigation}/>;
           case 'data':
             return <Data />;
           default:
